@@ -30,7 +30,7 @@ void UPlayerHealthComponent::UpdateHealth(float DeltaHealth)
 
 	OnHealthChanged.Broadcast(Health, MaxHealth);
 
-	if (Health == 0.f)
+	if (Health <= 0.f)
 	{
 		OnHealthDepleted.Broadcast();
 	}
