@@ -3,8 +3,11 @@
 Controls:
 
 Z Q S D    -> Player Movement
+
 Left Shift -> Player Dash
+
 Space      -> Player Jump
+
 X          -> Test Debug Damage (take 1 damage)
 
 Inputs are disabled on win and death (+ trigger ragdoll state)
