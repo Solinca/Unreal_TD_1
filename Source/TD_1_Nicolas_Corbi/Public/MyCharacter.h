@@ -16,8 +16,6 @@ class TD_1_NICOLAS_CORBI_API AMyCharacter : public ACharacter
 
 protected:
 	AMyCharacter();
-	virtual void BeginPlay() override;
-	virtual void Tick(float DeltaTime) override;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Health")
 	UPlayerHealthComponent* PlayerHealthComponent;

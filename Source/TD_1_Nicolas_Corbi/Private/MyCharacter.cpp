@@ -2,25 +2,15 @@
 
 AMyCharacter::AMyCharacter()
 {
-	PrimaryActorTick.bCanEverTick = true;
+	PrimaryActorTick.bCanEverTick = false;
 
 	SpringArm = CreateDefaultSubobject<USpringArmComponent>("SpringArm");
 
-	SpringArm->SetupAttachment(RootComponent);
+	SpringArm->SetupAttachment(GetMesh());
 
 	Camera = CreateDefaultSubobject<UCameraComponent>("Camera");
 
 	Camera->SetupAttachment(SpringArm);
 
 	PlayerHealthComponent = CreateDefaultSubobject<UPlayerHealthComponent>("PlayerHealthComponent");
-}
-
-void AMyCharacter::BeginPlay()
-{
-	Super::BeginPlay();
-}
-
-void AMyCharacter::Tick(float DeltaTime)
-{
-	Super::Tick(DeltaTime);
 }
