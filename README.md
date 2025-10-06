@@ -17,9 +17,9 @@ Trap Types:
 
 - Spike Trap      -> Overlap (1 damage)
 - Lava            -> Overlap (insta-death)
-- Spike Ball      -> Hit (1 damage, but can insta-death if multi-hit)
-- Trick Platform  -> Green and Blue platform; stepping on the blue one trigger the trap, and you fall in lava
-- Moving Platform -> 2 simple platforms that moves on the X-axis with Spike Balls and lava below
+- Spike Ball      -> Hit (1 damage, but can kill you instantly if multi-hit)
+- Trick Platform  -> Green and Blue platform; stepping on the blue one triggers the trap, and you fall in lava
+- Moving Platform -> 2 simple platforms that move on the X-axis with spike balls and lava below
 
 
 UI Types:
