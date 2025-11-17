@@ -5,6 +5,7 @@
 #include "InputActionValue.h"
 #include "InputAction.h"
 #include "InputMappingContext.h"
+#include "MyUserWidget.h"
 #include "MyPlayerController.generated.h"
 
 USTRUCT(BlueprintType)
@@ -44,6 +45,9 @@ protected:
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Input|Settings")
 	float LaunchVelocity;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Widget")
+	TSubclassOf<UMyUserWidget> CustomWidget = nullptr;
 
 private:
 	UFUNCTION()

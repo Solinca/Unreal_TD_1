@@ -11,6 +11,17 @@ void AMyPlayerController::BeginPlay()
 {
 	Super::BeginPlay();
 
+	/*
+	* Create a CustomWidget, add to viewport and set input for UI Only
+	*/
+	/*
+		CreateWidget<UMyUserWidget>(this, CustomWidget)->AddToViewport();
+
+		SetInputMode(FInputModeUIOnly());
+
+		SetShowMouseCursor(true);
+	*/
+
 	if (!MappingContext)
 	{
 		return;
