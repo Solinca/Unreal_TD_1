@@ -25,14 +25,14 @@ jobs:
       shell: pwsh
 
     - name: Add dependencies
-      working-directory: ${{github.workspace}}
+      working-directory: ${{github.workspace}}/CMAKE
       run: |
         vcpkg new --application
         vcpkg add port sfml
       shell: cmd
 
     - name: Configure CMake
-      working-directory: ${{github.workspace}}
+      working-directory: ${{github.workspace}}/CMAKE
       run: |
         cmake -S . -B build `
         -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} `
@@ -40,12 +40,12 @@ jobs:
       shell: pwsh
 
     - name: Build
-      run: cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}}
+      run: cmake --build ${{github.workspace}}/CMAKE/build --config ${{env.BUILD_TYPE}}
 
     - name: Run
-      working-directory: ${{github.workspace}}/build/src/${{env.BUILD_TYPE}}
+      working-directory: ${{github.workspace}}/CMAKE/build/src/${{env.BUILD_TYPE}}
       run: |
-        start /b .\cours_test.exe
+        start /b .\CMakeProjectTest.exe
         timeout /t 5
         taskkill /f /im cours_test.exe
       shell: cmd
