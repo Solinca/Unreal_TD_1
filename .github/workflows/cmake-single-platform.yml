@@ -2,7 +2,7 @@ name: cours_test
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "test/github-action" ]
 
 env:
   BUILD_TYPE: Release
